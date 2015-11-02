@@ -1,4 +1,4 @@
-var hours = ['10 am', '11 am', 'Noon', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm'];
+var hours = ['10 am', '11 am', 'Noon', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm', 'Total'];
 
 
 
@@ -21,7 +21,7 @@ var pikePlace = {
   }
   for (var i = 0; i < pikePlace.hourlySales.length; i++) {
     var node = document.createElement('li')
-    var textnode = document.createTextNode(hours[i] + ': ' + pikePlace.hourlySales[i])
+    var textnode = document.createTextNode(hours[i] + ': ' + pikePlace.hourlySales[i]);
     node.appendChild(textnode);
     document.getElementById('list').appendChild(node);
   }
