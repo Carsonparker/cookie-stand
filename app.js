@@ -81,9 +81,9 @@ seaTac.calcCookiesHr();
 seaTac.display()
 
 var southCenter = {
-  minCustHr: 6,
-  maxCustHr: 44,
-  avgCookies: 1.2,
+  minCustHr: 11,
+  maxCustHr: 38,
+  avgCookies: 1.9,
   hourlySales: [],
   dailyTotal: 0,
 
@@ -121,9 +121,9 @@ southCenter.calcCookiesHr();
 southCenter.display()
 
 var bellevueSquare = {
-  minCustHr: 6,
-  maxCustHr: 44,
-  avgCookies: 1.2,
+  minCustHr: 20,
+  maxCustHr: 48,
+  avgCookies: 3.3,
   hourlySales: [],
   dailyTotal: 0,
 
@@ -161,9 +161,9 @@ bellevueSquare.calcCookiesHr();
 bellevueSquare.display()
 
 var alki = {
-  minCustHr: 6,
-  maxCustHr: 44,
-  avgCookies: 1.2,
+  minCustHr: 3,
+  maxCustHr: 24,
+  avgCookies: 2.6,
   hourlySales: [],
   dailyTotal: 0,
 
