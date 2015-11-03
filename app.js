@@ -1,4 +1,4 @@
-var hours = ['10 am', '11 am', 'Noon', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm'];
+var hours = ['', '10 am', '11 am', 'Noon', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm'];
 
 var pikePlace = {
   minCustHr: 17,
