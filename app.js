@@ -1,5 +1,5 @@
 var hours = ['10 am', '11 am', '12pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm'];
-// var locations = [];
+var locations = [];
 
 function CookieStand(storeLocation, minCustHr, maxCustHr, avgCookies) {
 
@@ -9,7 +9,7 @@ function CookieStand(storeLocation, minCustHr, maxCustHr, avgCookies) {
   this.avgCookies = avgCookies;
   this.hourlySales = [];
   this.dailyTotal = 0;
-  // locations.push(this);
+  locations.push(this);
 
   this.calcRandCust = function() {
     return Math.floor(Math.random() * (this.maxCustHr - this.minCustHr + 1)) + this.minCustHr;
@@ -41,7 +41,6 @@ function CookieStand(storeLocation, minCustHr, maxCustHr, avgCookies) {
       row.appendChild(totalCookies);
       tbl.appendChild(row);
   }
-};
 
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
 var seaTac = new CookieStand("Sea Tac Airport", 6, 44, 1.2);
@@ -65,12 +64,43 @@ for (var i = 0; i < hours.length; i++) {
   headerRow.appendChild(dailyTotal);
   tbl.appendChild(headerRow);
 
-// for (var i = 0; i < locations.length; i++) {
-//   locations[i].displayData();
-// }
-pikePlace.displayData();
-seaTac.displayData();
-southCenter.displayData();
-bellevueSquare.displayData();
-alki.displayData();
+for (var i = 0; i < locations.length; i++) {
+  locations[i].displayData();
+}
+// pikePlace.displayData();
+// seaTac.displayData();
+// southCenter.displayData();
+// bellevueSquare.displayData();
+// alki.displayData();
+
 document.body.appendChild(tbl);
+
+displayAllLocations = function() {
+  for (var i = 0; i < locations.length; i++);
+    locations[i].displayData();
+}
+displayAllLocations();
+
+var newStandForm = function(event) {
+    event.preventDefault();
+
+    if (!event.target.standname.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value) {
+      return alerts('Feilds cannot be empty!');
+    }
+    var stand = event.target.standname.value;
+    var minC = event.target.min.value;
+    var maxC = event.target.max.value;
+    var avgC = Number(event.target.avg.value);
+  }
+//Setting up variables for DOM access
+var standname = document.getElementByName('standname');
+var min = document.getElementByName('min');
+var max = document.getElementByName('max');
+var avg = document.getElementByName('avg');
+
+var newStand = new CookieStand(location, min, max, avg);
+
+};
+
+
+
