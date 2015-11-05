@@ -1,4 +1,4 @@
-var hours = ['10 am', '11 am', '12pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm', '6 pm'];
+var hours = ['10 am', '11 am', '12pm', '1 pm', '2 pm', '3 pm', '4 pm', '5 pm'];
 var locations = [];
 var tbl = document.createElement('table');
 
@@ -51,9 +51,6 @@ var southCenter = new CookieStand("Southcenter Mall", 11, 38, 1.9);
 var bellevueSquare = new CookieStand("Bellevue Square Mall", 20, 48, 3.3);
 var alki = new CookieStand("Alki Beach", 3, 24, 2.6);
 
-//this is where I am making the table
-
-
 var headerRow = document.createElement('thead');
 var emptyCell = document.createElement('td')
     headerRow.appendChild(emptyCell);
@@ -67,17 +64,6 @@ for (var i = 0; i < hours.length; i++) {
   dailyTotal.textContent = "Total";
   headerRow.appendChild(dailyTotal);
   tbl.appendChild(headerRow);
-
-// for (var i = 0; i < locations.length; i++) {
-//   locations[i].displayData();
-// }
-// pikePlace.displayData();
-// seaTac.displayData();
-// southCenter.displayData();
-// bellevueSquare.displayData();
-// alki.displayData();
-
-
 
 displayAllLocations = function() {
   for (var i = 0; i < locations.length; i++) {
@@ -96,11 +82,6 @@ var newStandForm = function(event) {
     var minC = event.target.min.value;
     var maxC = event.target.max.value;
     var avgC = Number(event.target.avg.value);
-//Setting up variables for DOM access
-// var standname = document.getElementByName('standname');
-// var min = document.getElementByName('min');
-// var max = document.getElementByName('max');
-// var avg = document.getElementByName('avg');
 
 var newStand = new CookieStand(stand, minC, maxC, avgC);
 locations.push(newStand);
